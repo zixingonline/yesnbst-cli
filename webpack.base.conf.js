@@ -66,7 +66,7 @@ module.exports = {
 	},
 	plugins: [
 		new ImageminPlugin({
-	      	disable: process.env.NODE_ENV === 'production' ? true : false,
+	      	disable: process.env.NODE_ENV !== 'production',
 	      	pngquant: {//图片质量
 	        	quality: '95-100'
 	      	}
