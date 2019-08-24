@@ -51,6 +51,18 @@ module.exports = {
 		        	"css-loader"
 		        ]
 		  	},{
+	            test: /\.less$/,
+	            use: [
+					{
+					    loader: MiniCssExtractPlugin.loader,
+					    options: {
+					      	publicPath: '../../' 
+					    }
+					},
+					'css-loader',
+					'less-loader'
+		        ],
+	        },{
 		  		test: /\.(woff2|woff|eot|ttf|otf)(\?.*)?$/,
 		  		loader: 'url-loader',
 		  		options: {
